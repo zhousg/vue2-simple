@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Hello Vue!</h1>
+      <p>The simple vue2</p>
+      <div>信息: {{ message }} 消息</div>
+      <div>年龄: {{ user.age }} 岁</div>
+      <div>计算属性: {{ reversedMessage }} 岁</div>
+    </div>
+
+    <script src="./vue.js"></script>
+    <script>
+      const vm = new Vue({
+        el: "#app",
+        data() {
+          return {
+            message: "Hello Vue!",
+            user: {
+              name: "John Doe",
+              age: 30,
+            },
+          };
+        },
+        watch: {
+          message: function (newVal, oldVal) {
+            console.log("newVal", newVal);
+            console.log("oldVal", oldVal);
+          },
+        },
+        computed: {
+          reversedMessage: function () {
+            return this.message.split("").reverse().join("");
+          },
+        },
+      });
+
+      // vm.$watch("user.age", function (newVal, oldVal) {
+      //   console.log("newVal", newVal);
+      //   console.log("oldVal", oldVal);
+      // });
+    </script>
+  </body>
+</html>

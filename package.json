@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "dev": "rollup -w --config",
+    "build": "rollup --config"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.3",
+    "eslint": "^8.44.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^16.0.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "rollup": "^3.26.2",
+    "rollup-plugin-serve": "^2.0.2"
+  }
+}
